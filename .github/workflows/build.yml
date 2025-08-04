@@ -10,6 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Install libssl
+      run: sudo apt-get update && sudo apt-get install -y libssl-dev
+
     - name: Install .NET Core
       uses: actions/setup-dotnet@v3
       with:
